@@ -37,7 +37,7 @@ func UpdateQueuesStatus() {
 
 // Função para buscar as filas do RabbitMQ via API
 func fetchRabbitMQQueues(auth config.Auth) ([]QueueInfo, error) {
-	url := fmt.Sprintf("%s://%s:%s@%s:%d/api/queues", auth.Protocol, auth.Username, auth.Password, auth.Host, auth.Port)
+	url := fmt.Sprintf("%s://%s:%s@%s:%d%s/api/queues", auth.Protocol, auth.Username, auth.Password, auth.Host, auth.Port, auth.Path)
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, fmt.Errorf("erro ao fazer requisição HTTP: %v", err)

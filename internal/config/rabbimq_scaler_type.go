@@ -6,6 +6,7 @@ type Auth struct {
 	Port     int    `yaml:"port"`
 	Username string `yaml:"username"`
 	Password string `yaml:"password"`
+	Path    string `yaml:"path"`
 	VHost    string `yaml:"vhost"`
 }
 
