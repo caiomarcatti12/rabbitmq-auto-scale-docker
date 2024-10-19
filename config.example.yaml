@@ -1,0 +1,10 @@
+- auth:
+    protocol: http
+    host: host.docker.internal
+    port: 15672 
+    username: root
+    password: password
+    vhost: /
+  queues:
+    - name: teste
+      containerName: hello-container
