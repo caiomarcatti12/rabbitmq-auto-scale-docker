@@ -18,7 +18,7 @@ func LoadConfig() error {
 		log.Fatal("Erro ao obter o caminho do binário:", err)
 	}
 
-	path := filepath.Join(filepath.Dir(executable), "../config.yaml")
+	path := filepath.Join(filepath.Dir(executable), "config.yaml")
 
 	// Ler o conteúdo do arquivo YAML
 	yamlFile, err := ioutil.ReadFile(path)
